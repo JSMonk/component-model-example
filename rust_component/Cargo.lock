@@ -51,14 +51,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "25a2bc672d1148e28034f176e01fffebb08b35768468cc954630da77a1449005"
 
 [[package]]
-name = "iface"
-version = "0.1.0"
-dependencies = [
- "pulldown-cmark",
- "wit-bindgen",
-]
-
-[[package]]
 name = "indexmap"
 version = "2.2.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -190,6 +182,14 @@ dependencies = [
  "proc-macro2",
  "quote",
  "unicode-ident",
+]
+
+[[package]]
+name = "test"
+version = "0.1.0"
+dependencies = [
+ "pulldown-cmark",
+ "wit-bindgen",
 ]
 
 [[package]]

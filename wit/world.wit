@@ -1,9 +1,15 @@
-interface test {
-    test: func();
+package cm:example;
+
+interface kotlin {
+    test: func() -> result<bool, s32>;
 }
 
-world w {
-  import iface;
-  export iface;
-  export test;
+interface rust {
+    test: func() -> result<bool, s32>;
+}
+
+world kotlin-default {
+  import rust;
+  export rust;
+  export kotlin;
 }

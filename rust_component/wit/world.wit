@@ -1,0 +1,9 @@
+package cm:example;
+
+interface rust {
+  test: func() -> result<bool, s32>;
+}
+
+world rust-default {
+  export rust;
+}

@@ -10,10 +10,9 @@ rm -rf ./build/out
 mkdir -p ./build/out/dependencies
 
 # Build Rust component
-cp wit/iface.wit ./rust-component/wit/
-(cd ./rust-component/ && \
+(cd ./rust_component/ && \
 cargo build --target wasm32-unknown-unknown --release && \
-wasm-tools component new ./target/wasm32-unknown-unknown/release/iface.wasm -o ../build/out/dependencies/iface.wasm)
+wasm-tools component new ./target/wasm32-unknown-unknown/release/test.wasm -o ../build/out/dependencies/test.wasm)
 
 # Generate WIT bindings for Kotlin
 wit-bindgen kotlin ./wit --out-dir src/wasmWasiMain/kotlin/bindings
